@@ -1,0 +1,5 @@
+*.mp3
+.vscode
+venv/
+__pycache__/
+*.pyc
