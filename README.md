@@ -11,6 +11,10 @@ This project is a speech-to-text translation application that uses Gradio for th
   - translate
   - gtts
 
+![img1](./img/img1.png)
+![img2](./img/img2.png)
+![img3](./img/img3.png)
+
 ## Installation
 
 1. Clone this repository:
