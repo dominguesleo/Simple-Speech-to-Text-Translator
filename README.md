@@ -17,6 +17,8 @@ This project is a speech-to-text translation application that uses Gradio for th
 
 ## Installation
 
+### Using Python
+
 1. Clone this repository:
 
     ```sh
@@ -38,7 +40,30 @@ This project is a speech-to-text translation application that uses Gradio for th
     pip install -r requirements.txt
     ```
 
+### Using Docker
+
+1. Clone this repository:
+
+    ```sh
+    git clone https://github.com/dominguesleo/Simple-Speech-to-Text-Translator.git
+    cd Simple-Speech-to-Text-Translator
+    ```
+
+2. Build the Docker image:
+
+    ```sh
+    docker build -t speech-to-text-translator .
+    ```
+
+3. Run the Docker container:
+
+    ```sh
+    docker run -p 7861:7861 --name sttt speech-to-text-translator
+    ```
+
 ## Usage
+
+### Using Python
 
 1. Run the main script:
 
@@ -46,13 +71,21 @@ This project is a speech-to-text translation application that uses Gradio for th
     python main.py
     ```
 
-2. Open your web browser and go to the address shown in the terminal (default is `http://127.0.0.1:7860`).
+2. Open your web browser and go to the address shown in the terminal (default is `http://127.0.0.1:7861`).
 
 3. Upload an audio file or record your voice using the microphone.
 
 4. Select the target language for translation.
 
-5. The application will transcribe the audio, translate the text, and generate an audio file with the translation.
+### Using Docker
+
+1. Open your web browser and go to the address shown in the terminal (default is `http://127.0.0.1:7861`).
+
+2. Upload an audio file or record your voice using the microphone.
+
+3. Select the target language for translation.
 
 ## Cleanup Function
-The application is configured to delete the generated `.mp3` file upon closing the execution. This is done for testing purposes to ensure that temporary files do not accumulate.
+
+The application is configured to delete the generated `.mp3` file upon closing the execution.
+This is done for testing purposes to ensure that temporary files do not accumulate.

@@ -64,7 +64,7 @@ interface = gradio.Interface(
     title="Speech to Text Translator",
     description="Translate your speech to text in any language",
     theme="soft",
-    allow_flagging="never",
+    flagging_mode="never",
 )
 
-interface.launch()
+interface.launch(server_name="0.0.0.0", server_port=7861)
